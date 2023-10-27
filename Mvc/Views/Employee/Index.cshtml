@@ -1,0 +1,33 @@
+@model List<EmployeeDto>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">FullName</th>
+      <th scope="col">Age</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Edit </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+@foreach(var employee in Model )
+{  <tbody>
+    <tr>
+      <td><p>@employee.Id</p></td>
+      <td><p>@employee.FullName</p></td>
+      <td><p>@employee.Age</p></td>
+      <td><p>@employee.Salary</p></td>
+      <td><p>@employee.Number</p></td>
+        <td><p>@employee.Email</p></td>
+      <td><a href="employee/delete/@employee.Id"><button>Delete</button></a></td>
+      <td><a href="employee/update/@employee.Id"><button>Update</button></a></td>
+      
+    </tr>
+    
+  </tbody>
+}
+    
+</table>
